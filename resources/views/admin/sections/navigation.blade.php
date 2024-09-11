@@ -19,7 +19,7 @@
         </div>
         <!-- /menu profile quick info -->
 
-        <br/>
+        <br />
 
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
@@ -36,26 +36,30 @@
             </div>
             <div class="menu_section">
                 <h3>{{ __('views.backend.section.navigation.sub_header_1') }}</h3>
+                {{ __()}}
                 <ul class="nav side-menu">
                     <li>
                         <a href="{{ route('admin.users') }}">
                             <i class="fa fa-users" aria-hidden="true"></i>
                             {{ __('views.backend.section.navigation.menu_1_1') }}
                         </a>
-                    </li><li>
+                    </li>
+                    <li>
                         <a href="{{ route('admin.users.restore') }}">
-                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
                             {{ __('views.backend.section.navigation.menu_1_3') }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('admin.permissions') }}">
-                            <i class="fa fa-key" aria-hidden="true"></i>
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
                             {{ __('views.backend.section.navigation.menu_1_2') }}
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <!-- 
             <div class="menu_section">
                 <h3>{{ __('views.backend.section.navigation.sub_header_2') }}</h3>
 
@@ -91,7 +95,9 @@
                       <a href="https://www.labs64.com/guidechimp/" target="_blank" title="Interactive Guided Product Tours"><i class="fa fa-external-link" aria-hidden="true"></i>GuideChimp</a>
                   </li>
                 </ul>
-            </div>
+            </div> -->
+
+
         </div>
         <!-- /sidebar menu -->
     </div>

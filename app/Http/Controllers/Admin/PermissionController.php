@@ -10,14 +10,16 @@ class PermissionController
     public function index(Request $request)
     {
         $users = User::with(['roles', 'protectionValidation'])->sortable(['email' => 'asc'])->paginate();
-        return view('admin.permissions', ['users' => $users]);
+        // return view('admin.permissions', ['users' => $users]);
+        return view('init');
     }
 
     public function repeat(User $user, Request $request)
     {
         $protectionValidation = protection_validate($user);
 
-        if ($request->expectsJson()) return response($protectionValidation->toArray());
+        if ($request->expectsJson())
+            return response($protectionValidation->toArray());
 
         return redirect()->back();
     }

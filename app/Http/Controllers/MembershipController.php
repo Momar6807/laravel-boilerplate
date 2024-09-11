@@ -52,7 +52,8 @@ class MembershipController extends Controller
 
         ]);
 
-        if (!$user->protectionValidation) return redirect($request->get('dest', '/'));
+        if (!$user->protectionValidation)
+            return redirect($request->get('dest', '/'));
 
         $validationResult = collect($user->protectionValidation->getValidationResult(config('protection.membership.product_module_number')));
 
@@ -74,7 +75,8 @@ class MembershipController extends Controller
         $user = $request->user();
         $user->load(['protectionValidation']);
 
-        if ($user->protectionValidation) $user->protectionValidation->delete();
+        if ($user->protectionValidation)
+            $user->protectionValidation->delete();
 
         return redirect($request->get('dest', '/'));
     }
